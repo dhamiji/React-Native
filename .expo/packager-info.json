@@ -1,0 +1,10 @@
+{
+  "expoServerNgrokUrl": "https://bc-55y.dhamiji.practice.exp.direct",
+  "packagerNgrokUrl": "https://packager.bc-55y.dhamiji.practice.exp.direct",
+  "ngrokPid": 28008,
+  "expoServerPort": 19000,
+  "devToolsPort": 19002,
+  "packagerPort": 19000,
+  "packagerPid": null,
+  "webpackServerPort": null
+}
