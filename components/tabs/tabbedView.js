@@ -3,8 +3,8 @@ import { Text, View } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import Settings from './settings';
-import NewsFeed from './newsFeed';
+import Settings from '../profile/settings';
+import NewsFeed from '../newsFeed/newsFeed';
 import { useNavigation } from '@react-navigation/native';
 const Tab = createBottomTabNavigator();
 
@@ -17,10 +17,10 @@ function TabbedView(props) {
                 tabBarIcon: ({ focused, color, size }) => {
                     let iconName;
 
-                    if (route.name === 'feed') {
-                        iconName = focused ? 'home' : 'home';
-                    } else if (route.name === 'Settings') {
-                        iconName = focused ? 'play-circle-outline' : 'play-circle-outline';
+                    if (route.name === 'Home') {
+                        iconName = focused ? 'home' : 'home-outline';
+                    } else if (route.name === 'Profile') {
+                        iconName = focused ? 'person-circle' : 'person-circle-outline';
                     }
 
                     // You can return any component that you like here!
@@ -31,8 +31,8 @@ function TabbedView(props) {
                 activeTintColor: '#2681f2',
                 inactiveTintColor: 'gray',
             }}>
-            <Tab.Screen name="feed" children={()=><NewsFeed navigation={navigation}/>} />
-            <Tab.Screen name="Settings" component={Settings} />
+            <Tab.Screen name="Home" children={()=><NewsFeed navigation={navigation}/>} />
+            <Tab.Screen name="Profile" component={Settings} />
         </Tab.Navigator>
     );
 }

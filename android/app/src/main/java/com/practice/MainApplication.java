@@ -6,6 +6,9 @@ import android.net.Uri;
 
 import com.facebook.react.PackageList;
 import com.facebook.react.ReactApplication;
+import com.imagepicker.ImagePickerPackage;
+import com.imagepicker.ImagePickerPackage;
+import com.imagepicker.ImagePickerPackage;
 import com.swmansion.reanimated.ReanimatedPackage;
 import com.swmansion.reanimated.ReanimatedPackage;
 import com.facebook.react.ReactInstanceManager;
@@ -76,6 +79,9 @@ public class MainApplication extends Application implements ReactApplication {
 protected List<ReactPackage> getPackages() {
   return Arrays.<ReactPackage>asList(
     new MainReactPackage(),
+            new ImagePickerPackage(),
+            new ImagePickerPackage(),
+            new ImagePickerPackage(),
             new ReanimatedPackage(),
             new ReanimatedPackage(),
     new RNCViewPagerPackage()
